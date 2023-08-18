@@ -1,10 +1,15 @@
 import React from "react";
 import { Card, Row, Col, ListGroup, ListGroupItem } from "react-bootstrap";
 import "../static/css/CoolerCard.css"; // Import the CSS file
+import { useTheme } from "../utils/themeProvider";
 
 const CoolerCard = ({ cooler }) => {
+  const theme = useTheme();
+
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card
+      style={{ width: "18rem", borderColor: theme.currentView.colors.primary }}
+    >
       {/* <Row className="justify-content-center"> */}
       {/* <Col md={4} className="mb-4"> */}
       <Card.Body>
