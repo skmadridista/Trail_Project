@@ -1,0 +1,11 @@
+/* SwitchExample.css */
+.form-check-input:checked {
+    background-color:"none";
+    box-shadow: 0 0 0 0.25rem rgba(234, 110, 110, 0.25);
+    background-color: #fa7759;
+    border-color: white;
+}
+.form-check-input:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(255, 255, 255);
+}

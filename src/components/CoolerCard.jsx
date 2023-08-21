@@ -4,13 +4,11 @@ import "../static/css/CoolerCard.css"; // Import the CSS file
 import { useTheme } from "../utils/themeProvider";
 
 const CoolerCard = ({ cooler }) => {
-  const theme = useTheme();
-  const primarycolor = theme.mode.colors.primary;
-
+  const { hanldeModeChange, mode } = useTheme();
   return (
     <Row>
       <Col>
-        <Card>
+        <Card data-bs-theme={mode}>
           <Card.ImgOverlay>
             <Badge
               pill
@@ -34,10 +32,11 @@ const CoolerCard = ({ cooler }) => {
           </Card.Body>
 
           <Button
-            style={{
-              margin: "4px",
-              borderColor: primarycolor,
-            }}
+            // style={{
+            //   margin: "4px",
+            //   borderColor: primarycolor,
+            // }}
+            className="btn"
           >
             Buy Now
           </Button>
