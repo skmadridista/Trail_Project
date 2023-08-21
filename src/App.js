@@ -1,4 +1,3 @@
-import CoolerListing from "./components/CoolerListing";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {ThemeProvider} from "./utils/themeProvider";
 import NavBar from "./components/NavBar"
