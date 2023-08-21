@@ -28,8 +28,11 @@ export const ThemeProvider = ({ children }) => {
     },
   };
   let currentView = mode ? lightMode : darkMode;
+  const hanldeModeChange=()=>{
+    setMode(!mode)
+  }
   return (
-    <ThemeContext.Provider value={{ setMode, currentView, mode }}>
+    <ThemeContext.Provider value={{ hanldeModeChange, currentView }}>
       {children}
     </ThemeContext.Provider>
   );
