@@ -5,7 +5,7 @@ import { useTheme } from "../utils/themeProvider";
 
 const CoolerCard = ({ cooler }) => {
   const theme = useTheme();
-  const primarycolor = theme.currentView.colors.primary;
+  const primarycolor = theme.mode.colors.primary;
 
   return (
     <Row>
@@ -14,7 +14,7 @@ const CoolerCard = ({ cooler }) => {
           <Card.ImgOverlay>
             <Badge
               pill
-              variant="danger"
+              bg="warning"
               style={{ fontSize: "1rem", fontWeight: "bold" }}
             >
               20% Off

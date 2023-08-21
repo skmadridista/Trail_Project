@@ -1,38 +1,31 @@
 import { createContext, useState, useContext } from "react";
 
 const ThemeContext = createContext(null);
+const lightMode = {
+  colors: {
+    primary: "#FFFFFF",
+    secondary: "#EDE9F3",
+    background: "#C2B8D9",
+    text: "#A07AB5",
+  },
+};
 
+const darkMode = {
+  colors: {
+    primary: "#120A21",
+    secondary: "#2C1952",
+    background: "#4C2B96",
+    text: "#724C9D",
+  },
+};
 export const ThemeProvider = ({ children }) => {
-  const [mode, setMode] = useState(true);
-  const lightMode = {
-    colors: {
-      primary: "#007bff",
-      secondary: "#6c757d",
-      background: "#f8f9fa",
-      text: "#343a40",
-    },
-    fonts: {
-      main: "Helvetica, Arial, sans-serif",
-    },
-  };
+  const [mode, setMode] = useState(lightMode);
 
-  const darkMode = {
-    colors: {
-      primary: "#1e90ff",
-      secondary: "#adb5bd",
-      background: "#343a40",
-      text: "#f8f9fa",
-    },
-    fonts: {
-      main: "Helvetica, Arial, sans-serif",
-    },
+  const hanldeModeChange = () => {
+    setMode(mode === lightMode ? darkMode : lightMode);
   };
-  let currentView = mode ? lightMode : darkMode;
-  const hanldeModeChange=()=>{
-    setMode(!mode)
-  }
   return (
-    <ThemeContext.Provider value={{ hanldeModeChange, currentView }}>
+    <ThemeContext.Provider value={{ hanldeModeChange, mode }}>
       {children}
     </ThemeContext.Provider>
   );
