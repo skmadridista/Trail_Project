@@ -1,16 +1,15 @@
-import { Container } from "react-bootstrap";
-import CoolerListing from "./components/CoolerListing";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { ThemeProvider } from "./utils/themeProvider";
-// import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {ThemeProvider} from "./utils/themeProvider";
+import NavBar from "./components/NavBar"
+
+
 function App() {
   return (
     <ThemeProvider>
-      <Container>
-        <div className="App">
-          <CoolerListing />
-        </div>
-      </Container>
+    <div className="App">
+      <NavBar/>
+      <CoolerListing  />
+    </div>
     </ThemeProvider>
   );
 }
