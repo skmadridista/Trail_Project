@@ -1,6 +1,7 @@
 import { Container, Nav, Navbar, Form } from "react-bootstrap";
 import { useTheme } from "../utils/themeProvider";
 import "../style/NavBar.css";
+const navList=["Features", "Coolers", "Almiras", "Accessories", "Contact Us"]
 function NavBar() {
   const { hanldeModeChange, mode } = useTheme();
   return (
@@ -10,11 +11,7 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Navbar.Brand href="#home">Logo</Navbar.Brand>
-            <Nav.Link>Features</Nav.Link>
-            <Nav.Link>Coolers</Nav.Link>
-            <Nav.Link>Almiras</Nav.Link>
-            <Nav.Link>Accessories</Nav.Link>
-            <Nav.Link>Contact Us</Nav.Link>
+            {navList.map((e)=><Nav.Link >{e}</Nav.Link>)}
           </Nav>
           <br></br>
         </Navbar.Collapse>
