@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Row, Col, Button, Badge } from "react-bootstrap";
-import "../static/css/CoolerCard.css"; // Import the CSS file
+import "../style/CoolerCard.css"; // Import the CSS file
 import { useTheme } from "../utils/themeProvider";
 
 const CoolerCard = ({ cooler }) => {

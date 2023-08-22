@@ -1,6 +1,6 @@
 import { Container, Nav, Navbar, Form } from "react-bootstrap";
 import { useTheme } from "../utils/themeProvider";
-import "./NavBar.css";
+import "../style/NavBar.css";
 function NavBar() {
   const { hanldeModeChange, mode } = useTheme();
   return (
@@ -23,6 +23,7 @@ function NavBar() {
           id="theme-switch"
           label={` ${mode!=='light'?"Dark":"Light"} mode`}
           onClick={hanldeModeChange}
+          title="Change theme"
         />
        
       </Container>
