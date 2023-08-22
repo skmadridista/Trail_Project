@@ -1,0 +1,27 @@
+.App .dark {
+  background-color: #000000;
+  color: #fd8f00;
+  & p {
+    color: #f5f5f5;
+  }
+  & .btn {
+    background-color: #ffc107;
+  }
+}
+.App .light {
+  background-color: rgb(134, 205, 242);
+  & nav{
+    background-color: #e0eaec !important;
+  }
+  & p {
+    color: rgb(0, 0, 0);
+  }
+  & .btn {
+    background-color: black;
+  }
+}
+
+.btn {
+  margin: 2px;
+
+}
