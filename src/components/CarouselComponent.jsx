@@ -2,6 +2,7 @@ import React from "react";
 import { Carousel, Ratio } from "react-bootstrap";
 import "../static/css/CarouselComponent.css";
 import { useTheme } from "../utils/themeProvider";
+import ImageComponent from "./common/ImageComponent";
 
 const images = [
   {
@@ -28,23 +29,7 @@ function CarouselComponent() {
     >
       {images.map((image, index) => (
         <Carousel.Item key={index}>
-          {window.innerWidth <= 768 ? (
-            <Ratio aspectRatio="21x9">
-              <img
-                className="d-block mx-auto rounded"
-                src={image.src}
-                alt={image.alt}
-              />
-            </Ratio>
-          ) : (
-            <img
-              className="d-block mx-auto rounded"
-              src={image.src}
-              alt={image.alt}
-              width="800" // Set your preferred width for larger screens
-              height="400" // Set your preferred height for larger screen
-            />
-          )}
+         <ImageComponent src={image.src} alt={image.alt}/>
         </Carousel.Item>
       ))}
     </Carousel>
