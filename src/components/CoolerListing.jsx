@@ -16,7 +16,7 @@ function CoolerListing() {
     <Container className="d-flex justify-content-center">
       <Row>
         {coolers.map((cooler) => (
-          <Col key={cooler.id} xs={12} sm={6} md={4} lg={3}>
+          <Col key={cooler.id} xs={6} sm={6} md={4} lg={3}>
             <CoolerCard cooler={cooler} />
           </Col>
         ))}

@@ -1,0 +1,15 @@
+/* CSS file (styles.css) */
+/* Default styles for larger screens */
+.carousel img {
+    max-width: 100%;
+  }
+  
+  /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
+  @media (max-width: 768px) {
+    .carousel {
+      max-width: 100%; /* Full width for smaller screens */
+      height: auto; /* Allow the height to adjust proportionally */
+    }
+  }
+
+  
