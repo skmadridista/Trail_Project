@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel, Ratio } from "react-bootstrap";
-import "../static/css/CarouselComponent.css";
+import "../style/CarouselComponent.css";
 import { useTheme } from "../utils/themeProvider";
 import ImageComponent from "./common/ImageComponent";
 
