@@ -5,6 +5,7 @@ import { useTheme } from "./utils/themeProvider";
 import './style/App.css'
 import CarouselComponent from "./components/CarouselComponent";
 import CustomerReview from "./components/CustomerReview";
+const navList=["Features", "Coolers", "Almiras", "Accessories", "Contact Us"]
 
 function App() {
   const theme = useTheme().mode;
@@ -12,7 +13,7 @@ function App() {
   return (
     <div className="App" >
       <div className={theme}>
-      <NavBar />
+      <NavBar navList={navList} />
       <CarouselComponent />
       <CoolerListing />
       <CustomerReview />
