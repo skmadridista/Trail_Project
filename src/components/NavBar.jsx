@@ -1,17 +1,17 @@
 import { Container, Nav, Navbar, Form } from "react-bootstrap";
 import { useTheme } from "../utils/themeProvider";
 import "../style/NavBar.css";
-const navList=["Features", "Coolers", "Almiras", "Accessories", "Contact Us"]
-function NavBar() {
+
+function NavBar({navList}) {
   const { hanldeModeChange, mode } = useTheme();
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" data-bs-theme={mode}>
       <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+          <Nav>
             <Navbar.Brand href="#home">Logo</Navbar.Brand>
-            {navList.map((e)=><Nav.Link >{e}</Nav.Link>)}
+            {navList.map((e, index)=><Nav.Link key={index}>{e}</Nav.Link>)}
           </Nav>
           <br></br>
         </Navbar.Collapse>
@@ -21,6 +21,7 @@ function NavBar() {
           label={` ${mode!=='light'?"Dark":"Light"} mode`}
           onClick={hanldeModeChange}
           title="Change theme"
+          data-testid="checkbox-element"
         />
        
       </Container>
