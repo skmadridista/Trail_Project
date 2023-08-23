@@ -4,6 +4,7 @@ import CoolerListing from "./components/CoolerListing";
 import { useTheme } from "./utils/themeProvider";
 import './style/App.css'
 import CarouselComponent from "./components/CarouselComponent";
+import CustomerReview from "./components/CustomerReview";
 
 function App() {
   const theme = useTheme().mode;
@@ -14,6 +15,7 @@ function App() {
       <NavBar />
       <CarouselComponent />
       <CoolerListing />
+      <CustomerReview />
       </div>
       
     </div>

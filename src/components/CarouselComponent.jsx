@@ -1,5 +1,5 @@
 import React from "react";
-import { Carousel, Ratio } from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
 import "../style/CarouselComponent.css";
 import { useTheme } from "../utils/themeProvider";
 import ImageComponent from "./common/ImageComponent";
@@ -20,7 +20,7 @@ const images = [
 ];
 
 function CarouselComponent() {
-  const { hanldeModeChange, mode } = useTheme();
+  const { mode } = useTheme();
 
   return (
     <Carousel
@@ -29,7 +29,7 @@ function CarouselComponent() {
     >
       {images.map((image, index) => (
         <Carousel.Item key={index}>
-         <ImageComponent src={image.src} alt={image.alt}/>
+          <ImageComponent src={image.src} alt={image.alt} />
         </Carousel.Item>
       ))}
     </Carousel>
